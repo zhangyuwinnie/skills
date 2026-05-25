@@ -1,0 +1,19 @@
+{
+  "links": [
+    "https://example.com/ai-news-1",
+    "https://example.com/ai-news-2",
+    "https://example.com/ai-news-3"
+  ],
+  "notebook_name": "AI News First Principles Builder Briefing",
+  "output_path": "./output/ai-news-first-principles-builder-briefing.mp3",
+  "language": "zh",
+  "audio_format": "deep-dive",
+  "audio_length": "default",
+  "episode_focus": "请用中文，以双主持人播客的形式，运用第一性原理分析这组 AI 领域的 news/feed。不要逐条总结新闻；请把相近事件归并成几个最关键的主题，只讨论真正重要的变化。对每个主题都回答：1. Why it matters。2. Why it matters for builders。3. 哪些变化是短期噪音，哪些是长期拐点。4. 哪些二阶影响最容易被忽视。5. 对创业者、产品团队和开发者最实际的机会是什么。请少讲表面信息，多讲底层结构、能力约束、商业逻辑、分发逻辑和未来 6-12 个月的判断。",
+  "reuse_notebook": false,
+  "strict_mode": false,
+  "source_timeout_seconds": 180,
+  "audio_timeout_seconds": 900,
+  "poll_interval_seconds": 3,
+  "overwrite": false
+}

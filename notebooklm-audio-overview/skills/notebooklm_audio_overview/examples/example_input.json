@@ -1,0 +1,19 @@
+{
+  "links": [
+    "https://example.com/article-one",
+    "https://example.com/article-two"
+  ],
+  "notebook_name": "Research Briefing",
+  "output_path": "./output/research-briefing.mp3",
+  "language": "en",
+  "audio_format": "deep-dive",
+  "audio_length": "default",
+  "episode_focus": "Compare the sources and call out disagreements.",
+  "reuse_notebook": false,
+  "strict_mode": false,
+  "timeout_seconds": 300,
+  "source_timeout_seconds": 180,
+  "audio_timeout_seconds": 900,
+  "poll_interval_seconds": 2,
+  "overwrite": false
+}

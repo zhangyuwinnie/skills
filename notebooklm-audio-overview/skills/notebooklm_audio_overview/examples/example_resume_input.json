@@ -1,0 +1,8 @@
+{
+  "resume_notebook_id": "your-notebook-id",
+  "resume_artifact_id": "your-audio-artifact-id",
+  "output_path": "./output/resumed-audio.mp3",
+  "audio_timeout_seconds": 900,
+  "poll_interval_seconds": 5,
+  "overwrite": false
+}
