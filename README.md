@@ -6,6 +6,8 @@ A curated collection of my custom AI agent skills.
 
 - [`task-driven-project-bootstrap`](./task-driven-project-bootstrap/)  
   Bootstrap a task-driven project operating system for new or existing software repositories.
+- [`create-my-skill`](./create-my-skill/)  
+  Create a new skill and matching command wrapper in home or repo `.agents` directories.
 - [`setup-project-worklog`](./setup-project-worklog/)  
   Initialize a lightweight resumable worklog system for repositories using `AGENTS.md`, feature notes, lessons, and plan files.
 
@@ -18,6 +20,9 @@ More skills will be added gradually after they are cleaned up and documented.
 ```text
 skills/
 ├── README.md
+├── create-my-skill/
+│   ├── README.md
+│   └── SKILL.md
 ├── setup-project-worklog/
 │   ├── README.md
 │   ├── SKILL.md
