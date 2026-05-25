@@ -1,6 +1,6 @@
 ---
 name: create-my-skill
-description: Create a new skill and matching command wrapper in the user's home or repository .agents directories. Use when the user wants to add a new skill, scaffold a command wrapper, or decide whether a skill should live globally or in a specific repo.
+description: Create a new skill and matching command wrapper in the user's home or repository .agents directories. Use whenever the user wants to add a new skill, scaffold a command wrapper, update skill authoring guidance, or decide whether a skill should live globally or in a specific repo, even if they do not explicitly name this skill.
 ---
 
 # Create My Skill
@@ -14,15 +14,32 @@ Create new skills using the consolidated layout:
 
 Keep `skills` as the workflow source of truth and `commands` as thin wrappers only.
 
-## Reference Pattern
+## SKILL.md Format Reference
 
-Before writing a new skill, read `~/.cursor/skills-cursor/create-skill/SKILL.md` for structure and authoring guidance.
+Every skill must have:
 
-Use it as a format reference only.
+- **YAML frontmatter** with two required fields:
+  - `name` - lowercase, hyphenated, matches the directory name
+  - `description` - explains what the skill does AND when to trigger it. Make the trigger language "pushy" because skills under-trigger by default. Prefer phrasing like "Use whenever the user mentions X, Y, or Z, even if they do not explicitly ask for it."
+- **A markdown body** with practical, actionable instructions. Prefer numbered steps and concrete commands over prose explanations.
+- **Optional bundled resources** in subdirectories.
 
-- Do not write to `~/.cursor/skills-cursor/`
-- Do not create duplicate content in tool-specific directories
+Folder layout:
+
+```text
+<skill-name>/
+|-- SKILL.md          (required)
+|-- scripts/          (optional - executable code for deterministic tasks)
+|-- references/       (optional - docs loaded into context on demand)
+`-- assets/           (optional - templates, icons, fonts)
+```
+
+Authoring rules:
+
+- Write only to the canonical `.agents/` location. Do not write to tool-specific directories like `~/.cursor/skills-cursor/` or `~/.claude/skills/`; those should be symlinks or managed by `npx skills`.
+- Do not duplicate content across tool-specific directories.
 - Follow the existing wrapper pattern already used in `~/.agents/commands/*.md`
+- Keep `SKILL.md` under ~500 lines. For longer content, move detail into `references/` and reference it from `SKILL.md`.
 
 ## Step 1: Determine Scope
 
@@ -70,7 +87,7 @@ Minimum structure:
 ```markdown
 ---
 name: <skill-name>
-description: <what it does and when to use it>
+description: <what it does and when to use it - make the trigger language pushy>
 ---
 
 # <Title>
