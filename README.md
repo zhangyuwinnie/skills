@@ -8,6 +8,8 @@ A curated collection of my custom AI agent skills.
   Bootstrap a task-driven project operating system for new or existing software repositories.
 - [`create-my-skill`](./create-my-skill/)  
   Create a new skill and matching command wrapper in home or repo `.agents` directories.
+- [`add-skill-from-repo`](./add-skill-from-repo/)  
+  Import third-party skill repositories into the home agent system.
 - [`setup-project-worklog`](./setup-project-worklog/)  
   Initialize a lightweight resumable worklog system for repositories using `AGENTS.md`, feature notes, lessons, and plan files.
 
@@ -20,6 +22,9 @@ More skills will be added gradually after they are cleaned up and documented.
 ```text
 skills/
 ├── README.md
+├── add-skill-from-repo/
+│   ├── README.md
+│   └── SKILL.md
 ├── create-my-skill/
 │   ├── README.md
 │   └── SKILL.md
